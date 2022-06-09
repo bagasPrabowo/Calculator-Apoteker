@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<input id="numb">
+<input id="margin">
+
+<button type="button" onclick="ppn()">PPN</button>
+<button type="button" onclick="nonPpn()">Non-PPN</button>
+
+<p id="demo"></p>
+<script>
+function ppn() {
+ let angka = Number(document.getElementById('numb').value);
+	let tambah = angka + 500;
+	let kurang = angka - 500;
+	let kali = angka * (10/100);
+	let bagi = angka/2;
+	let laba = Number(document.getElementById('margin').value) * kali;
+	let hasil = `${angka} tambah jadi ${tambah}
+	kurang jadi ${kurang}
+	kali jadi ${kali} 
+	bagi jadi ${bagi}
+	margin ${laba}`;
+
+  document.getElementById("demo").innerHTML = hasil;
+}
+
+function nonPpn() {
+ let angka = Number(document.getElementById('numb').value);
+	let tambah = angka + 500;
+	let kurang = angka - 500;
+	let kali = angka * (20/100);
+	let bagi = angka/2;
+	let laba = Number(document.getElementById('margin').value) * kali;
+	let hasil = `${angka} 
+	tambah jadi ${tambah}
+	kurang jadi ${kurang}
+	kali jadi ${kali} 
+	bagi jadi ${bagi}
+	margin ${laba}`;
+
+  document.getElementById("demo").innerHTML = hasil;
+}
+
+</script>
+
+</body>
+</html>
